@@ -306,3 +306,69 @@ section{
         right: 0;
     }
 }
+
+@media(max-width:1160px){
+    header{
+        padding: 10px 4%;
+    }
+    section{
+        padding: 30px 8%;
+    }
+    .box{
+        height: 60px;
+        width: 60px;
+    }
+    .hero{
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .hero-img{
+        text-align: center;
+        padding-top: 30px;
+    }
+    .hero-img img{
+        width: 500px;
+        height:auto;
+        max-width: 100%;
+    }
+
+    .hero-text{
+        text-align: center;
+
+    }
+    .hero-text p{
+        margin: 10px auto;
+    }
+
+    .hero-text h5{
+        font-size: 24px;
+
+    }
+    .scroll{
+        display: none;
+    }
+}
+
+@media(max-width:600px){
+    .box{
+        height: 50px;
+        width: 50px;
+
+    }
+    .content{
+        gap: 18px;
+    }
+    :root{
+        --h1-font: 3.2rem;
+    }
+}
+
+@media(max-width:620px){
+    section{
+        padding: 20px 4%;
+    }
+    .btn{
+        padding: 12px 24px;
+    }
+}

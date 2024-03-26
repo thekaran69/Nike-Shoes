@@ -18,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
 
@@ -44,14 +47,14 @@
     </header>
 
     <section class="hero">
-        <div class="hero-img">
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="2000">
             <img src="Img/hero1.png" class="one">
         </div>
         <div class="hero-text">
-            <h1>Nike Air<br> Dunk-270</h1>
-            <p>Nike's 1st Lifestyle Air Max returns with a vibrant color gradient that's sure to turn heads. vibrant color gragient that's sure to turn heads</p>
-            <h5>$240.00</h5>
-            <div class="hero-btnn">
+            <h1 data-aos="fade-right" data-aos-duration="1500">Nike Air<br> Dunk-270</h1>
+            <p data-aos="flip-down" data-aos-duration="1400" data-aos-delay="200">Nike's 1st Lifestyle Air Max returns with a vibrant color gradient that's sure to turn heads. vibrant color gragient that's sure to turn heads</p>
+            <h5 data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="300">$240.00</h5>
+            <div class="hero-btnn" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
                 <a href="#" class="btn">Add to bag</a>
                 <a href="#" class="btn2">View Details</a>
             </div>
@@ -60,24 +63,41 @@
     </section>
 
     <div class="content">
-        <div class="box">
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="100">
             <li><img src="Img/p1.png" onclick="slider('Img/hero1.png')"></li>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-out-left" data-aos-duration="1300" data-aos-delay="150">
             <li><img src="Img/p2.png" onclick="slider('Img/hero2.png')"></li>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="200">
             <li><img src="Img/p3.png" onclick="slider('Img/hero1.png')"></li>
         </div>
     </div>
 
-    <a href="#" class="scroll"><i class="ri-scroll-to-bottom-line"></i></a>
-    <script type="text/javascript">
-        function slider(anything){
-            document.querySelector('.one').src=anything;
-        }
+    <a href="#" class="scroll" data-aos="zoom-out-left" data-aos-duration="1200" data-aos-delay="300"><i class="ri-scroll-to-bottom-line"></i></a>
+    
+
+    <script
+    type="text/javascript">
+    function slider(anything){
+    document.querySelector('.one').src=anything;
+    };
+
+    let menu = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open')
+}
+
     </script>
 
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 1
+      });
+    </script>
 </body>
 </html>
