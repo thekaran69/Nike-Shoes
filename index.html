@@ -45,7 +45,7 @@
 
     <section class="hero">
         <div class="hero-img">
-            <img src="Img/hero1.png" alt="">
+            <img src="Img/hero1.png" class="one">
         </div>
         <div class="hero-text">
             <h1>Nike Air<br> Dunk-270</h1>
@@ -58,6 +58,26 @@
         </div>
 
     </section>
+
+    <div class="content">
+        <div class="box">
+            <li><img src="Img/p1.png" onclick="slider('Img/hero1.png')"></li>
+        </div>
+        <div class="box">
+            <li><img src="Img/p2.png" onclick="slider('Img/hero2.png')"></li>
+        </div>
+        <div class="box">
+            <li><img src="Img/p3.png" onclick="slider('Img/hero1.png')"></li>
+        </div>
+    </div>
+
+    <a href="#" class="scroll"><i class="ri-scroll-to-bottom-line"></i></a>
+    <script type="text/javascript">
+        function slider(anything){
+            document.querySelector('.one').src=anything;
+        }
+    </script>
+
     
 </body>
 </html>
